@@ -53,6 +53,18 @@ void fsm_automatic_run() {
 //			setTimer2(WAITING_TIME * 1000);
 //		}
 //
+		if (isButtonPressed(3) == 1) {
+			pedesStatus = 1;
+			setTimer3(WAITING_TIME * 1000);
+			pedestrianLight(status);
+		}
+
+		if (pedesStatus == 1 && timer3_flag == 0) {
+			pedestrianLight(status);
+		} else {
+			pedesStatus = 0;
+			turnOffPedestrianLight();
+		}
 		break;
 
 	case AUTO_RED1_YELLOW2:
@@ -71,6 +83,19 @@ void fsm_automatic_run() {
 //			setTimer2(WAITING_TIME * 1000);
 //		}
 //
+		if (isButtonPressed(3) == 1) {
+			pedesStatus = 1;
+			setTimer3(WAITING_TIME * 1000);
+			pedestrianLight(status);
+		}
+
+		if (pedesStatus == 1 && timer3_flag == 0) {
+			pedestrianLight(status);
+		} else {
+			pedesStatus = 0;
+			turnOffPedestrianLight();
+		}
+
 		break;
 
 	case AUTO_GREEN1_RED2:
@@ -89,6 +114,18 @@ void fsm_automatic_run() {
 //			setTimer2(WAITING_TIME * 1000);
 //		}
 //
+		if (isButtonPressed(3) == 1) {
+			pedesStatus = 1;
+			setTimer3(WAITING_TIME * 1000);
+			pedestrianLight(status);
+		}
+
+		if (pedesStatus == 1 && timer3_flag == 0) {
+			pedestrianLight(status);
+		} else {
+			pedesStatus = 0;
+			turnOffPedestrianLight();
+		}
 		break;
 
 	case AUTO_YELLOW1_RED2:
@@ -107,6 +144,18 @@ void fsm_automatic_run() {
 //			setTimer2(WAITING_TIME * 1000);
 //		}
 //
+		if (isButtonPressed(3) == 1) {
+			pedesStatus = 1;
+			setTimer3(WAITING_TIME * 1000);
+			pedestrianLight(status);
+		}
+
+		if (pedesStatus == 1 && timer3_flag == 0) {
+			pedestrianLight(status);
+		} else {
+			pedesStatus = 0;
+			turnOffPedestrianLight();
+		}
 		break;
 
 	default:

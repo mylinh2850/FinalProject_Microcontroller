@@ -2,7 +2,7 @@
  * fsm_manual.c
  *
  *  Created on: Nov 29, 2022
- *      Author: Linh
+ *      Author: Hungvan
  */
 
 #include "fsm_manual.h"

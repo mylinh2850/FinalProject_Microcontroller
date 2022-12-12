@@ -1,0 +1,18 @@
+Đèn có 3 chế độ: auto (tự động), manual (điều khiển bằng nút) và tuning (chỉnh sửa thời gian).
+Trạng thái khởi tạo là auto.
+
+Nhấn button1 để chuyển từ mode auto -> manual -> tuning -> auto
+
+- Trong mode auto:
+	Đèn đỏ, xanh, vàng lần lượt sáng theo thời gian đã cài đặt trước đó.
+
+- Trong mode manual:
+	Nhấn button1 để chuyển sang mode tuning
+	Nhấn button2 để chuyển từ red1, green2 -> red1, yellow2 -> green1, red2 -> yellow1, red2 -> red1, green2
+	Trong 10s không bấm gì gì thì tự động quay về mode auto
+
+- Trong mode tuning:
+	Nhấn button2 để chuyển từ thay đổi tgian đèn red -> green -> yellow
+	Nhấn button3 để tăng tgian của đèn tương ứng
+	Nhấn button1 để submit và chuyển về mode auto
+	Thay đổi tgian đèn nào thì blink đèn đó

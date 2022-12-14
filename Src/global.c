@@ -7,10 +7,13 @@
 
 #include "global.h"
 
-int RED_TIME = 5;
-int GREEN_TIME = 3;
-int YELLOW_TIME = 2;
+int RED_TIME = 10;
+int GREEN_TIME = 6;
+int YELLOW_TIME = 4;
 int WAITING_TIME = 10;
+int BUZZER_DELAY_TIME = 600;
+int VOLUMN = 300;
 
-int status = 0;
-int volumn = 500;
+int status = INIT;
+int volumn;
+int timeOn;

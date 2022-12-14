@@ -26,6 +26,8 @@ void toggleYELLOW();
 
 void pedestrianLight(int status);
 void turnOffPedestrianLight();
-void buzzer(TIM_HandleTypeDef htim, int volumn);
+void buzzer(int status);
+
+extern int flag;
 
 #endif /* INC_TRAFFIC_LIGHT_H_ */

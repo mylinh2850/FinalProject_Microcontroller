@@ -2,7 +2,7 @@
  * fsm_manual.c
  *
  *  Created on: Nov 29, 2022
- *      Author: Hungvan
+ *      Author: Linh
  */
 
 #include "fsm_manual.h"
@@ -28,7 +28,23 @@ void fsm_manual_run() {
 
 		//if over 10s no button is pressed -> auto mode
 		if (timer2_flag == 1) {
-			status = AUTO_RED1_GREEN2;
+			status = INIT;
+		}
+
+		if (isButtonPressed(3) == 1) {
+			pedesStatus = 1;
+			volumn = VOLUMN;
+			timeOn = BUZZER_DELAY_TIME;
+			setTimer3(WAITING_TIME * 1000);
+			pedestrianLight(status);
+			buzzer(status);
+		} else if (pedesStatus == 1 && timer3_flag == 0) {
+			pedestrianLight(status);
+			buzzer(status);
+		} else {
+			pedesStatus = 0;
+			turnOffPedestrianLight();
+			__HAL_TIM_SetCompare (&htim3, TIM_CHANNEL_1, 0);
 		}
 
 		//if button1 is pressed -> tuning mode, turn off pedestrian light
@@ -51,7 +67,23 @@ void fsm_manual_run() {
 
 		//if over 10s no button is pressed -> auto mode
 		if (timer2_flag == 1) {
-			status = AUTO_RED1_GREEN2;
+			status = INIT;
+		}
+
+		if (isButtonPressed(3) == 1) {
+			pedesStatus = 1;
+			volumn = VOLUMN;
+			timeOn = BUZZER_DELAY_TIME;
+			setTimer3(WAITING_TIME * 1000);
+			pedestrianLight(status);
+			buzzer(status);
+		} else if (pedesStatus == 1 && timer3_flag == 0) {
+			pedestrianLight(status);
+			buzzer(status);
+		} else {
+			pedesStatus = 0;
+			turnOffPedestrianLight();
+			__HAL_TIM_SetCompare (&htim3, TIM_CHANNEL_1, 0);
 		}
 
 		//if button1 is pressed -> tuning mode, turn off pedestrian light
@@ -74,7 +106,23 @@ void fsm_manual_run() {
 
 		//if over 10s no button is pressed -> auto mode
 		if (timer2_flag == 1) {
-			status = AUTO_RED1_GREEN2;
+			status = INIT;
+		}
+
+		if (isButtonPressed(3) == 1) {
+			pedesStatus = 1;
+			volumn = VOLUMN;
+			timeOn = BUZZER_DELAY_TIME;
+			setTimer3(WAITING_TIME * 1000);
+			pedestrianLight(status);
+			buzzer(status);
+		} else if (pedesStatus == 1 && timer3_flag == 0) {
+			pedestrianLight(status);
+			buzzer(status);
+		} else {
+			pedesStatus = 0;
+			turnOffPedestrianLight();
+			__HAL_TIM_SetCompare (&htim3, TIM_CHANNEL_1, 0);
 		}
 
 		//if button1 is pressed -> tuning mode, turn off pedestrian light
@@ -97,7 +145,23 @@ void fsm_manual_run() {
 
 		//if over 10s no button is pressed -> auto mode
 		if (timer2_flag == 1) {
-			status = AUTO_RED1_GREEN2;
+			status = INIT;
+		}
+
+		if (isButtonPressed(3) == 1) {
+			pedesStatus = 1;
+			volumn = VOLUMN;
+			timeOn = BUZZER_DELAY_TIME;
+			setTimer3(WAITING_TIME * 1000);
+			pedestrianLight(status);
+			buzzer(status);
+		} else if (pedesStatus == 1 && timer3_flag == 0) {
+			pedestrianLight(status);
+			buzzer(status);
+		} else {
+			pedesStatus = 0;
+			turnOffPedestrianLight();
+			__HAL_TIM_SetCompare (&htim3, TIM_CHANNEL_1, 0);
 		}
 
 		//if button1 is pressed -> tuning mode, turn off pedestrian light

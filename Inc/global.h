@@ -33,12 +33,17 @@
 #define TUN_GREEN			302
 #define TUN_YELLOW			303
 
+
 extern int RED_TIME;
 extern int GREEN_TIME;
 extern int YELLOW_TIME;
 extern int WAITING_TIME;
+extern int BUZZER_DELAY_TIME;
+extern int VOLUMN;
 
 extern int volumn;
+extern int timeOn;
 extern int status;
+
 
 #endif /* INC_GLOBAL_H_ */

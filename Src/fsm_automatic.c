@@ -8,24 +8,6 @@
 #include "fsm_automatic.h"
 
 int pedesStatus = 0;
-/*--------------------------------*/
-
-//AUTO_RED		10
-//AUTO_GREEN	01
-//AUTO_YELLOW	11
-/*--------------------------------*/
-
-//Press button1 để chuyển từ mode auto -> manual -> tuning
-//	Trong mode manual:
-//		Press button1 để chuyển sang mode tuning
-//		Press button2 để chuyển từ red1, green2 -> red1, yellow2 -> green1, red2 -> yellow1, red2 -> red1, green2
-//		Trong 10s không bấm gì gì thì tự động quay về mode auto
-//	Trong mode tuning:
-//		Press button2 để chuyển từ thay đổi tgian đèn red -> green -> yellow
-//		Press button3 để tăng tgian của đèn tương ứng
-//		Press button1 để submit và chuyển về mode auto
-//		Thay đổi tgian đèn nào thì blink đèn đó
-/*--------------------------------*/
 
 void fsm_automatic_run() {
 	switch (status) {
@@ -47,12 +29,12 @@ void fsm_automatic_run() {
 			setYELLOW2Light();
 		}
 
-//		//if button1 is pressed -> manual mode
-//		if (isButtonPressed(0) == 1) {
-//			status = INIT_MAN;
-//			setTimer2(WAITING_TIME * 1000);
-//		}
-//
+		//if button1 is pressed -> manual mode
+		if (isButtonPressed(0) == 1) {
+			status = INIT_MAN;
+			setTimer2(WAITING_TIME * 1000);
+		}
+
 		if (isButtonPressed(3) == 1) {
 			pedesStatus = 1;
 			setTimer3(WAITING_TIME * 1000);
@@ -76,16 +58,17 @@ void fsm_automatic_run() {
 			setGREEN1Light();
 			setRED2Light();
 		}
-//
-//		//if button1 is pressed -> manual mode
-//		if (isButtonPressed(0) == 1) {
-//			status = INIT_MAN;
-//			setTimer2(WAITING_TIME * 1000);
-//		}
-//
+
+		//if button1 is pressed -> manual mode
+		if (isButtonPressed(0) == 1) {
+			status = INIT_MAN;
+			setTimer2(WAITING_TIME * 1000);
+		}
+
 		if (isButtonPressed(3) == 1) {
 			pedesStatus = 1;
 			setTimer3(WAITING_TIME * 1000);
+			setTimer4(400);
 			pedestrianLight(status);
 		}
 
@@ -108,12 +91,12 @@ void fsm_automatic_run() {
 			setRED2Light();
 		}
 
-//		//if button1 is pressed -> manual mode
-//		if (isButtonPressed(0) == 1) {
-//			status = INIT_MAN;
-//			setTimer2(WAITING_TIME * 1000);
-//		}
-//
+		//if button1 is pressed -> manual mode
+		if (isButtonPressed(0) == 1) {
+			status = INIT_MAN;
+			setTimer2(WAITING_TIME * 1000);
+		}
+
 		if (isButtonPressed(3) == 1) {
 			pedesStatus = 1;
 			setTimer3(WAITING_TIME * 1000);
@@ -138,12 +121,12 @@ void fsm_automatic_run() {
 			setGREEN2Light();
 		}
 
-//		//if button1 is pressed -> manual mode
-//		if (isButtonPressed(0) == 1) {
-//			status = INIT_MAN;
-//			setTimer2(WAITING_TIME * 1000);
-//		}
-//
+		//if button1 is pressed -> manual mode
+		if (isButtonPressed(0) == 1) {
+			status = INIT_MAN;
+			setTimer2(WAITING_TIME * 1000);
+		}
+
 		if (isButtonPressed(3) == 1) {
 			pedesStatus = 1;
 			setTimer3(WAITING_TIME * 1000);

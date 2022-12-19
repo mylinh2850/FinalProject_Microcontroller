@@ -1,18 +1,18 @@
-Đèn có 3 chế độ: auto (tự động), manual (điều khiển bằng nút) và tuning (chỉnh sửa thời gian).
-Trạng thái khởi tạo là auto.
+Đèn có 3 chế độ: auto (tự động), manual (điều khiển tín hiệu bằng nút nhấn) và tuning (chỉnh sửa thời gian).
+Khi khởi tạo, hệ thống sẽ ở mode auto.
 
-Nhấn button1 để chuyển từ mode auto -> manual -> tuning -> auto
+- Mode auto: Đèn RED, GREEN, YELLOW lần lượt sáng theo thời gian đã cài đặt trước đó. Trong mode này:
+	Nhấn button1 để chuyển sang mode manual
+	Nhấn button4 để bật đèn dành cho người đi bộ và buzzer sẽ kêu khi gần hết thời gian dành cho đèn đi bộ
 
-- Trong mode auto:
-	Đèn đỏ, xanh, vàng lần lượt sáng theo thời gian đã cài đặt trước đó.
-
-- Trong mode manual:
+- Mode manual: Cho phép người dùng điều khiển các tín hiệu của đèn thông qua button2. Trong mode này:
 	Nhấn button1 để chuyển sang mode tuning
-	Nhấn button2 để chuyển từ red1, green2 -> red1, yellow2 -> green1, red2 -> yellow1, red2 -> red1, green2
-	Trong 10s không bấm gì gì thì tự động quay về mode auto
+	Nhấn button2 để chuyển tín hiệu từ RED1, GREEN2 -> RED1, YELLOW2 -> GREEN1, RED2 -> YELLOW1, RED2 và quay về RED1, GREEN2
+	Nhấn button4 để bật đèn dành cho người đi bộ và buzzer sẽ kêu khi gần hết thời gian dành cho đèn đi bộ
+	Trong 10s nếu không thao tác gì thì hệ thống tự động quay về mode auto
 
-- Trong mode tuning:
-	Nhấn button2 để chuyển từ thay đổi tgian đèn red -> green -> yellow
-	Nhấn button3 để tăng tgian của đèn tương ứng
+- Mode tuning: Cho phép người dùng được tùy ý chỉnh sửa thời gian của các đèn trong khoảng từ 1 đến 99. Trong mode này:
+	Nhấn button2 để chuyển từ thay đổi thời gian của đèn RED -> GREEN -> YELLOW
+	Nhấn button3 để tăng thời gian của đèn tương ứng
 	Nhấn button1 để submit và chuyển về mode auto
-	Thay đổi tgian đèn nào thì blink đèn đó
+	Thay đổi tgian đèn nào thì đèn đó sẽ nhấp nháy

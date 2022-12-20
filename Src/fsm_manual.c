@@ -13,6 +13,11 @@ void fsm_manual_run() {
 		setRED1Light();
 		setGREEN2Light();
 		status = MAN_RED1_GREEN2;
+		timeDisplay = WAITING_TIME;
+		setTimer7(1000);
+		HAL_UART_Transmit(&huart2, (uint8_t*) strDisplay,
+				sprintf(strDisplay, "!7SEG:%d%d#", timeDisplay / 10,
+						timeDisplay % 10), 50);
 		break;
 
 	case MAN_RED1_GREEN2:
@@ -22,8 +27,17 @@ void fsm_manual_run() {
 			status = MAN_RED1_YELLOW2;
 			setTimer2(WAITING_TIME * 1000);
 
+			setTimer7(1000);
+			timeDisplay = WAITING_TIME;
 			setRED1Light();
 			setYELLOW2Light();
+		}
+		if (timer7_flag == 1) {
+			setTimer7(1000);
+			HAL_UART_Transmit(&huart2, (uint8_t*) strDisplay,
+					sprintf(strDisplay, "!7SEG:%d%d#", timeDisplay / 10,
+							timeDisplay % 10), 50);
+			timeDisplay--;
 		}
 
 		//if over 10s no button is pressed -> auto mode
@@ -31,6 +45,7 @@ void fsm_manual_run() {
 			status = INIT;
 		}
 
+//if button 4 is pressed -> turn on the pedestrian light and control buzzer
 		if (isButtonPressed(3) == 1) {
 			pedesStatus = 1;
 			volumn = VOLUMN;
@@ -58,11 +73,20 @@ void fsm_manual_run() {
 		//TODO
 		//if button2 is pressed -> case MAN_GREEN1_RED2
 		if (isButtonPressed(1) == 1) {
+			setTimer7(1000);
+			timeDisplay = WAITING_TIME;
 			status = MAN_GREEN1_RED2;
 			setTimer2(WAITING_TIME * 1000);
 
 			setGREEN1Light();
 			setRED2Light();
+		}
+		if (timer7_flag == 1) {
+			setTimer7(1000);
+			HAL_UART_Transmit(&huart2, (uint8_t*) strDisplay,
+					sprintf(strDisplay, "!7SEG:%d%d#", timeDisplay / 10,
+							timeDisplay % 10), 50);
+			timeDisplay--;
 		}
 
 		//if over 10s no button is pressed -> auto mode
@@ -97,11 +121,20 @@ void fsm_manual_run() {
 		//TODO
 		//if button2 is pressed -> case MAN_YELLOW1_RED2
 		if (isButtonPressed(1) == 1) {
+			setTimer7(1000);
+			timeDisplay = WAITING_TIME;
 			status = MAN_YELLOW1_RED2;
 			setTimer2(WAITING_TIME * 1000);
 
 			setYELLOW1Light();
 			setRED2Light();
+		}
+		if (timer7_flag == 1) {
+			setTimer7(1000);
+			HAL_UART_Transmit(&huart2, (uint8_t*) strDisplay,
+					sprintf(strDisplay, "!7SEG:%d%d#", timeDisplay / 10,
+							timeDisplay % 10), 50);
+			timeDisplay--;
 		}
 
 		//if over 10s no button is pressed -> auto mode
@@ -136,11 +169,20 @@ void fsm_manual_run() {
 		//TODO
 		//if button2 is pressed -> case MAN_RED1_GREEN2
 		if (isButtonPressed(1) == 1) {
+			setTimer7(1000);
+			timeDisplay = WAITING_TIME;
 			status = MAN_RED1_GREEN2;
 			setTimer2(WAITING_TIME * 1000);
 
 			setRED1Light();
 			setGREEN2Light();
+		}
+		if (timer7_flag == 1) {
+			setTimer7(1000);
+			HAL_UART_Transmit(&huart2, (uint8_t*) strDisplay,
+					sprintf(strDisplay, "!7SEG:%d%d#", timeDisplay / 10,
+							timeDisplay % 10), 50);
+			timeDisplay--;
 		}
 
 		//if over 10s no button is pressed -> auto mode

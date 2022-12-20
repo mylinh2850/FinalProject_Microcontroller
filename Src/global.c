@@ -17,3 +17,5 @@ int VOLUMN = 300;
 int status = INIT;
 int volumn;
 int timeOn;
+int timeDisplay = 0;
+char strDisplay[10] = "";

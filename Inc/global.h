@@ -7,6 +7,7 @@
 #ifndef INC_GLOBAL_H_
 #define INC_GLOBAL_H_
 
+#include "stdio.h"
 #include "main.h"
 #include "button.h"
 #include "fsm_automatic.h"
@@ -14,7 +15,6 @@
 #include "fsm_tuning.h"
 #include "traffic_light.h"
 #include "software_timer.h"
-
 
 #define INIT 				100
 #define AUTO_RED1_GREEN2	101
@@ -44,6 +44,7 @@ extern int VOLUMN;
 extern int volumn;
 extern int timeOn;
 extern int status;
-
+extern int timeDisplay;
+extern char strDisplay[10];
 
 #endif /* INC_GLOBAL_H_ */

@@ -20,6 +20,8 @@ int timer5_flag = 0;
 int timer5_counter = 0;
 int timer6_flag = 0;
 int timer6_counter = 0;
+int timer7_flag = 0;
+int timer7_counter = 0;
 
 void setTimer1(int duration) {
 	timer1_counter = duration / TICK;
@@ -49,6 +51,11 @@ void setTimer5(int duration) {
 void setTimer6(int duration) {
 	timer6_counter = duration / TICK;
 	timer6_flag = 0;
+}
+
+void setTimer7(int duration) {
+	timer7_counter = duration / TICK;
+	timer7_flag = 0;
 }
 
 void timerRun() {
@@ -87,6 +94,12 @@ void timerRun() {
 	}
 	if (timer6_counter <= 0) {
 		timer6_flag++;
+	}
+	if (timer7_counter > 0) {
+		timer7_counter--;
+	}
+	if (timer7_counter <= 0) {
+		timer7_flag++;
 	}
 }
 

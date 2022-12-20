@@ -75,7 +75,7 @@ void pedestrianLight(int status) {
 	if (status == AUTO_RED1_GREEN2 || status == MAN_RED1_GREEN2) {
 		setGREEN3Light();
 		setTimer4(0);
-		setTimer6(1500);
+		setTimer6(TIME_INC_FOR_BUZZER);
 	}
 
 	else if (status == AUTO_RED1_YELLOW2 || status == MAN_RED1_YELLOW2) {
@@ -109,8 +109,8 @@ void buzzer(int status) {
 			setTimer4(timeOn);
 		}
 		if (timer6_flag == 1) {
-			setTimer6(1500);
-			timeOn -= 200;
+			setTimer6(TIME_INC_FOR_BUZZER);
+			timeOn -= 100;
 			volumn += 200;
 
 			if (timeOn < 50) {

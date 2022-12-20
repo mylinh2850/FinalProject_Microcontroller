@@ -40,6 +40,7 @@ extern int YELLOW_TIME;
 extern int WAITING_TIME;
 extern int BUZZER_DELAY_TIME;
 extern int VOLUMN;
+extern int TIME_INC_FOR_BUZZER;
 
 extern int volumn;
 extern int timeOn;

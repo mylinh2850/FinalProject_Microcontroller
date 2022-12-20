@@ -101,7 +101,12 @@ void fsm_manual_run() {
 			setTimer3(WAITING_TIME * 1000);
 			pedestrianLight(status);
 			buzzer(status);
+			flag = 1;
 		} else if (pedesStatus == 1 && timer3_flag == 0) {
+			if (flag == 1) {
+				setTimer4(0);
+				flag = 0;
+			}
 			pedestrianLight(status);
 			buzzer(status);
 		} else {

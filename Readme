@@ -2,17 +2,17 @@
 Khi khởi tạo, hệ thống sẽ ở mode auto.
 
 - Mode auto: Đèn RED, GREEN, YELLOW lần lượt sáng theo thời gian đã cài đặt trước đó. Trong mode này:
-	Nhấn button1 để chuyển sang mode manual
-	Nhấn button4 để bật đèn dành cho người đi bộ và buzzer sẽ kêu khi gần hết thời gian dành cho đèn đi bộ
+	Nhấn button0 để chuyển sang mode manual
+	Nhấn button3 để bật đèn dành cho người đi bộ và buzzer sẽ kêu khi gần hết thời gian dành cho đèn đi bộ
 
 - Mode manual: Cho phép người dùng điều khiển các tín hiệu của đèn thông qua button2. Trong mode này:
-	Nhấn button1 để chuyển sang mode tuning
-	Nhấn button2 để chuyển tín hiệu từ RED1, GREEN2 -> RED1, YELLOW2 -> GREEN1, RED2 -> YELLOW1, RED2 và quay về RED1, GREEN2
-	Nhấn button4 để bật đèn dành cho người đi bộ và buzzer sẽ kêu khi gần hết thời gian dành cho đèn đi bộ
+	Nhấn button0 để chuyển sang mode tuning
+	Nhấn button1 để chuyển tín hiệu từ RED1, GREEN2 -> RED1, YELLOW2 -> GREEN1, RED2 -> YELLOW1, RED2 và quay về RED1, GREEN2
+	Nhấn button3 để bật đèn dành cho người đi bộ và buzzer sẽ kêu khi gần hết thời gian dành cho đèn đi bộ
 	Trong 10s nếu không thao tác gì thì hệ thống tự động quay về mode auto
 
 - Mode tuning: Cho phép người dùng được tùy ý chỉnh sửa thời gian của các đèn trong khoảng từ 1 đến 99. Trong mode này:
-	Nhấn button2 để chuyển từ thay đổi thời gian của đèn RED -> GREEN -> YELLOW
-	Nhấn button3 để tăng thời gian của đèn tương ứng
-	Nhấn button1 để submit và chuyển về mode auto
-	Thay đổi tgian đèn nào thì đèn đó sẽ nhấp nháy
+	Nhấn button1 để chuyển từ thay đổi thời gian của đèn RED -> GREEN -> YELLOW
+	Nhấn button2 để tăng thời gian của đèn tương ứng
+	Nhấn button0 để submit và chuyển về mode auto
+	Thay đổi tgian đèn nào thì đèn đó sẽ sáng

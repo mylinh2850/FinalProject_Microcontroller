@@ -68,23 +68,7 @@ static void MX_USART2_UART_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-void test_IO() {
-	HAL_GPIO_WritePin(LED1_0_GPIO_Port, LED1_0_Pin,
-			HAL_GPIO_ReadPin(Button1_GPIO_Port, Button1_Pin));
-	HAL_GPIO_WritePin(LED1_1_GPIO_Port, LED1_1_Pin,
-			HAL_GPIO_ReadPin(Button2_GPIO_Port, Button2_Pin));
 
-	HAL_GPIO_WritePin(LED2_0_GPIO_Port, LED2_0_Pin,
-			HAL_GPIO_ReadPin(Button3_GPIO_Port, Button3_Pin));
-	HAL_GPIO_WritePin(LED2_1_GPIO_Port, LED2_1_Pin,
-			HAL_GPIO_ReadPin(Button4_GPIO_Port, Button4_Pin));
-
-	HAL_GPIO_WritePin(LED3_0_GPIO_Port, LED3_0_Pin,
-			HAL_GPIO_ReadPin(Button3_GPIO_Port, Button3_Pin));
-	HAL_GPIO_WritePin(LED3_1_GPIO_Port, LED3_1_Pin,
-			HAL_GPIO_ReadPin(Button4_GPIO_Port, Button4_Pin));
-
-}
 /* USER CODE END 0 */
 
 /**

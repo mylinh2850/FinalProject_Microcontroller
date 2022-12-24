@@ -37,6 +37,7 @@ void fsm_automatic_run() {
 			setRED1Light();
 			setYELLOW2Light();
 		}
+
 		if (timer7_flag == 1) {
 			setTimer7(1000);
 			HAL_UART_Transmit(&huart2, (uint8_t*) strDisplay,
@@ -44,7 +45,8 @@ void fsm_automatic_run() {
 							timeDisplay % 10), 50);
 			timeDisplay--;
 		}
-//if button 4 is pressed -> turn on the pedestrian light and control buzzer
+
+		//if button3 is pressed -> turn on the pedestrian light and control buzzer
 		if (isButtonPressed(3) == 1) {
 			pedesStatus = 1;
 			volumn = VOLUMN;
@@ -61,7 +63,7 @@ void fsm_automatic_run() {
 			__HAL_TIM_SetCompare (&htim3, TIM_CHANNEL_1, 0);
 		}
 
-		//if button1 is pressed -> manual mode
+		//if button0 is pressed -> manual mode
 		if (isButtonPressed(0) == 1) {
 			status = INIT_MAN;
 			setTimer2(WAITING_TIME * 1000);
@@ -86,6 +88,7 @@ void fsm_automatic_run() {
 			timeDisplay--;
 		}
 
+		//if button3 is pressed -> turn on the pedestrian light and control buzzer
 		if (isButtonPressed(3) == 1) {
 			pedesStatus = 1;
 			volumn = VOLUMN;
@@ -107,7 +110,7 @@ void fsm_automatic_run() {
 			__HAL_TIM_SetCompare (&htim3, TIM_CHANNEL_1, 0);
 		}
 
-		//if button1 is pressed -> manual mode
+		//if button0 is pressed -> manual mode
 		if (isButtonPressed(0) == 1) {
 			status = INIT_MAN;
 			setTimer2(WAITING_TIME * 1000);
@@ -133,6 +136,7 @@ void fsm_automatic_run() {
 			timeDisplay--;
 		}
 
+		//if button3 is pressed -> turn on the pedestrian light and control buzzer
 		if (isButtonPressed(3) == 1) {
 			pedesStatus = 1;
 			volumn = VOLUMN;
@@ -149,7 +153,7 @@ void fsm_automatic_run() {
 			__HAL_TIM_SetCompare (&htim3, TIM_CHANNEL_1, 0);
 		}
 
-		//if button1 is pressed -> manual mode
+		//if button0 is pressed -> manual mode
 		if (isButtonPressed(0) == 1) {
 			status = INIT_MAN;
 			setTimer2(WAITING_TIME * 1000);
@@ -163,6 +167,7 @@ void fsm_automatic_run() {
 			status = INIT;
 		}
 
+		//if button3 is pressed -> turn on the pedestrian light and control buzzer
 		if (isButtonPressed(3) == 1) {
 			pedesStatus = 1;
 			volumn = VOLUMN;
@@ -179,7 +184,7 @@ void fsm_automatic_run() {
 			__HAL_TIM_SetCompare (&htim3, TIM_CHANNEL_1, 0);
 		}
 
-		//if button1 is pressed -> manual mode
+		//if button0 is pressed -> manual mode
 		if (isButtonPressed(0) == 1) {
 			status = INIT_MAN;
 			setTimer2(WAITING_TIME * 1000);

@@ -23,6 +23,8 @@ void fsm_tuning_run() {
 		//if button3 is pressed -> increase time of led red
 		setRED1Light();
 		setRED2Light();
+
+		//if button2 is pressed -> increase time of led red
 		if (isButtonPressed(2) == 1) {
 			RED_TIME++;
 			if (RED_TIME > 99) {
@@ -34,7 +36,7 @@ void fsm_tuning_run() {
 							timeDisplay % 10), 50);
 		}
 
-		//if button2 is pressed -> case TUN_GREEN
+		//if button1 is pressed -> case TUN_GREEN
 		if (isButtonPressed(1) == 1) {
 			status = TUN_GREEN;
 			offAllLed();
@@ -45,7 +47,7 @@ void fsm_tuning_run() {
 							timeDisplay % 10), 50);
 		}
 
-		//if button1 is pressed -> auto mode
+		//if button0 is pressed -> auto mode
 		if (isButtonPressed(0) == 1) {
 			status = INIT;
 			setTimer1(GREEN_TIME);
@@ -54,9 +56,10 @@ void fsm_tuning_run() {
 
 	case TUN_GREEN:
 		//TODO
-		//if button3 is pressed -> increase time of led green
 		setGREEN1Light();
 		setGREEN2Light();
+
+		//if button2 is pressed -> increase time of led green
 		if (isButtonPressed(2) == 1) {
 			GREEN_TIME++;
 			if (GREEN_TIME > 99) {
@@ -68,7 +71,7 @@ void fsm_tuning_run() {
 							timeDisplay % 10), 50);
 		}
 
-		//if button2 is pressed -> case TUN_YELLOW
+		//if button1 is pressed -> case TUN_YELLOW
 		if (isButtonPressed(1) == 1) {
 			status = TUN_YELLOW;
 			offAllLed();
@@ -80,7 +83,7 @@ void fsm_tuning_run() {
 							timeDisplay % 10), 50);
 		}
 
-		//if button1 is pressed -> auto mode
+		//if button0 is pressed -> auto mode
 		if (isButtonPressed(0) == 1) {
 			status = INIT;
 			setTimer1(GREEN_TIME);
@@ -91,7 +94,8 @@ void fsm_tuning_run() {
 		//TODO
 		setYELLOW1Light();
 		setYELLOW2Light();
-		//if button3 is pressed -> increase time of led yellow
+
+		//if button2 is pressed -> increase time of led yellow
 		if (isButtonPressed(2) == 1) {
 			YELLOW_TIME++;
 			if (YELLOW_TIME > 99) {
@@ -103,12 +107,12 @@ void fsm_tuning_run() {
 							timeDisplay % 10), 50);
 		}
 
-		//if button2 is pressed -> case TUN_RED
+		//if button1 is pressed -> case TUN_RED
 		if (isButtonPressed(1) == 1) {
 			status = INIT_TUN;
 		}
 
-		//if button1 is pressed -> auto mode
+		//if button0 is pressed -> auto mode
 		if (isButtonPressed(0) == 1) {
 			status = INIT;
 			setTimer1(GREEN_TIME);

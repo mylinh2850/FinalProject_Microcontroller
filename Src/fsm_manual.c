@@ -22,7 +22,7 @@ void fsm_manual_run() {
 
 	case MAN_RED1_GREEN2:
 		//TODO
-		//if button2 is pressed -> case MAN_RED1_YELLOW2
+		//if button1 is pressed -> case MAN_RED1_YELLOW2
 		if (isButtonPressed(1) == 1) {
 			status = MAN_RED1_YELLOW2;
 			setTimer2(WAITING_TIME * 1000);
@@ -45,7 +45,7 @@ void fsm_manual_run() {
 			status = INIT;
 		}
 
-//if button 4 is pressed -> turn on the pedestrian light and control buzzer
+		//if button 3 is pressed -> turn on the pedestrian light and control buzzer
 		if (isButtonPressed(3) == 1) {
 			pedesStatus = 1;
 			volumn = VOLUMN;
@@ -62,7 +62,7 @@ void fsm_manual_run() {
 			__HAL_TIM_SetCompare (&htim3, TIM_CHANNEL_1, 0);
 		}
 
-		//if button1 is pressed -> tuning mode, turn off pedestrian light
+		//if button0 is pressed -> tuning mode, turn off pedestrian light
 		if (isButtonPressed(0) == 1) {
 			status = INIT_TUN;
 			turnOffPedestrianLight();
@@ -71,7 +71,7 @@ void fsm_manual_run() {
 
 	case MAN_RED1_YELLOW2:
 		//TODO
-		//if button2 is pressed -> case MAN_GREEN1_RED2
+		//if button1 is pressed -> case MAN_GREEN1_RED2
 		if (isButtonPressed(1) == 1) {
 			setTimer7(1000);
 			timeDisplay = WAITING_TIME;
@@ -94,6 +94,7 @@ void fsm_manual_run() {
 			status = INIT;
 		}
 
+		//if button3 is pressed -> turn on the pedestrian light and control buzzer
 		if (isButtonPressed(3) == 1) {
 			pedesStatus = 1;
 			volumn = VOLUMN;
@@ -115,7 +116,7 @@ void fsm_manual_run() {
 			__HAL_TIM_SetCompare (&htim3, TIM_CHANNEL_1, 0);
 		}
 
-		//if button1 is pressed -> tuning mode, turn off pedestrian light
+		//if button0 is pressed -> tuning mode, turn off pedestrian light
 		if (isButtonPressed(0) == 1) {
 			status = INIT_TUN;
 			turnOffPedestrianLight();
@@ -124,7 +125,7 @@ void fsm_manual_run() {
 
 	case MAN_GREEN1_RED2:
 		//TODO
-		//if button2 is pressed -> case MAN_YELLOW1_RED2
+		//if button1 is pressed -> case MAN_YELLOW1_RED2
 		if (isButtonPressed(1) == 1) {
 			setTimer7(1000);
 			timeDisplay = WAITING_TIME;
@@ -147,6 +148,7 @@ void fsm_manual_run() {
 			status = INIT;
 		}
 
+		//if button3 is pressed -> turn on the pedestrian light and control buzzer
 		if (isButtonPressed(3) == 1) {
 			pedesStatus = 1;
 			volumn = VOLUMN;
@@ -163,7 +165,7 @@ void fsm_manual_run() {
 			__HAL_TIM_SetCompare (&htim3, TIM_CHANNEL_1, 0);
 		}
 
-		//if button1 is pressed -> tuning mode, turn off pedestrian light
+		//if button0 is pressed -> tuning mode, turn off pedestrian light
 		if (isButtonPressed(0) == 1) {
 			status = INIT_TUN;
 			turnOffPedestrianLight();
@@ -172,7 +174,7 @@ void fsm_manual_run() {
 
 	case MAN_YELLOW1_RED2:
 		//TODO
-		//if button2 is pressed -> case MAN_RED1_GREEN2
+		//if button1 is pressed -> case MAN_RED1_GREEN2
 		if (isButtonPressed(1) == 1) {
 			setTimer7(1000);
 			timeDisplay = WAITING_TIME;
@@ -195,6 +197,7 @@ void fsm_manual_run() {
 			status = INIT;
 		}
 
+		//if button3 is pressed -> turn on the pedestrian light and control buzzer
 		if (isButtonPressed(3) == 1) {
 			pedesStatus = 1;
 			volumn = VOLUMN;
@@ -211,7 +214,7 @@ void fsm_manual_run() {
 			__HAL_TIM_SetCompare (&htim3, TIM_CHANNEL_1, 0);
 		}
 
-		//if button1 is pressed -> tuning mode, turn off pedestrian light
+		//if button0 is pressed -> tuning mode, turn off pedestrian light
 		if (isButtonPressed(0) == 1) {
 			status = INIT_TUN;
 			turnOffPedestrianLight();
